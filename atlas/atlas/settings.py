@@ -70,7 +70,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
         "NAME": "atlasdb",
         "USER": "atlasdbadmin",
-        "PASSWORD": "uruncle",
+        "PASSWORD": "atlas",
         "HOST": "localhost",
         "PORT": "",
     }

@@ -1,10 +1,11 @@
-from api.models import Answer, Survey
+from api.models import Answer, Survey, JournalStub
 from api.serializers import (
     UserSerializer,
     AnswerSerializer,
     RegisterUserSerializer,
     AnswerListSerializer,
     SurveyListSerializer,
+    JournalStubSerializer,
 )
 from django.contrib.auth.models import User
 from django.http import JsonResponse
@@ -90,3 +91,11 @@ class AnswerSurvey(APIView):
             return Response(status=status.HTTP_201_CREATED)
 
         return Response(serializer.errors, status.HTTP_400_BAD_REQUEST)
+
+
+class JournalStubList(generics.ListAPIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    queryset = JournalStub.objects.all()
+    serializer_class = JournalStubSerializer
+

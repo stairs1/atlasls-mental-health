@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from api.models import Answer, Survey
+from api.models import Answer, Survey, JournalStub
 from django.contrib.auth.models import User
 
 
@@ -35,3 +35,19 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ["username", "answers"]
+
+class JournalStubSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = JournalStub
+        fields = [
+            "title",
+            "authors_date",
+            "relevant_questions",
+            "summary",
+            "subject_group",
+            "other_findings",
+            "task_mindfullness",
+            "task_wellness",
+            "task_clinical",
+        ]

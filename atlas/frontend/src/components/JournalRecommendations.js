@@ -39,7 +39,7 @@ class JournalRecommendations extends Component {
             return <li>{journalStub.title}</li>;
           })}
         </ul>
-        <Link to="/admin">
+        <Link to="/survey">
           <button>Take Survey</button>
         </Link>
       </div>

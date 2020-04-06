@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import JournalRecommendations from "./JournalRecommendations";
+import Survey from "./Survey";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class App extends Component {
@@ -13,8 +14,11 @@ class App extends Component {
       <Router>
         <div>
           <Switch>
-            <Route path="/">
+            <Route path="/journal_recommendations">
               <JournalRecommendations />
+            </Route>
+            <Route path="/survey">
+                <Survey />
             </Route>
           </Switch>
         </div>

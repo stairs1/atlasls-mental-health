@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import JournalRecommendations from "./JournalRecommendations";
 import Survey from "./Survey";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import SignIn from "./SignIn";
 
 class App extends Component {
   constructor(props) {
@@ -19,6 +20,9 @@ class App extends Component {
             </Route>
             <Route path="/survey">
                 <Survey />
+            </Route>
+            <Route path="/">
+                <SignIn />
             </Route>
           </Switch>
         </div>

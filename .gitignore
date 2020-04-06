@@ -1,0 +1,5 @@
+*.pyc
+*.pyo
+*.swp
+atlas/frontend/node_modules
+atlas/frontend/static

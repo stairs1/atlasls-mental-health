@@ -12,7 +12,7 @@ SECRET_KEY = "develop_key"
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.43.221', 'localhost']
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "api.apps.AtlasAdminConfig",
+    "frontend",
     "rest_framework",
     "rest_framework.authtoken",
 ]

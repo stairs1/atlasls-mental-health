@@ -79,6 +79,7 @@ class AnswerSurvey(APIView):
             )
             survey.save()
 
+            # TODO bulk create
             for validated_answer in validated_data:
                 answer = Answer.objects.create(
                     user=request.user,
@@ -94,7 +95,9 @@ class AnswerSurvey(APIView):
 
 
 class JournalStubList(generics.ListAPIView):
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
+    # open to any for testing frontend
+    permission_classes = [permissions.AllowAny]
 
     queryset = JournalStub.objects.all()
     serializer_class = JournalStubSerializer

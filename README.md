@@ -33,7 +33,10 @@ RESTful API and webapp for Atlas Life Systems
    <code>npm run dev</code>  
 10. Run server!  
    <code>cd atlasls-mental-health/atlas</code>  
-   <code>./manage.py runserver</code>
+   <code>./manage.py runserver</code>  
+   
+Bonus: create superuser for Django admin  
+   <code>python manage.py createsuperuser</code>
 
 
 ## API
